@@ -1,0 +1,98 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+<div id="banner2"> <img src="{% static 'images/new-banner_02.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#fff">
+<div id="main2">
+
+  <div class="tittle"></div>
+
+   <div class="tittle2">行业资讯 / <b>News</b></div>
+
+  <div class="left">
+
+    <div class="left-nav">
+
+      <ul>
+        <li><a href="{% url 'news_1' %}" class="red">新闻资讯</a></li>
+        <li><a href="{% url 'news_2' %}">行业资讯</a></li>
+        <li><a href="{% url 'news_3' %}">黄金资讯</a></li>
+        <li></li>
+      </ul>
+
+    </div>
+
+   <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right">
+
+    <div class="weizhi">您现在的位置：<a href='#'>行业资讯</a></div>
+    <div style="padding-top: 10px;border-bottom: 1px #ddd solid">
+        <p style="font-size: large"> 祝贺福建省福州市<b>汉唐中金实业有限公司</b>成立</p><br>
+        <p style="font-size: 14px">  对贵金属的投资；贵金属制品、珠宝首饰、玉器、金属材料的技术开发与销售；投资信息咨询；商品信息咨询；市场信息咨询与调查；企业管理咨询；市场营销策划。
+        </p>
+        <br>
+    </div>
+    <div class="news-zx">
+    {% for blog in blog_list1 %}
+    <ul>
+		<li><span>{{ blog.pub_time|date:"Y-m-d" }}</span><a href="{% url 'newlist' blog.id %}">{{ blog.title }}</a></li>
+    </ul>
+    {% endfor %}
+        <div class="page">
+          <!--<span>共<b>4</b>页</span>-->
+<!--<a class="b">1</a>-->
+<!--<a href='#'><img src='images/page_39.jpg' width='34' height='13' /></a>-->
+           {% if blog_list1.has_previous %}
+                <a href="?page=1" class="btn btn-success">
+                    &laquo; 1
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.previous_page_number }}"
+                   class="btn btn-secondary"
+                >
+                    {{ blog_list1.previous_page_number }}
+                </a>
+            {% endif %}
+
+            <!-- 当前页面 -->
+            <span class="current btn btn-danger btn-lg">
+                {{ blog_list1.number }}
+            </span>
+
+            <!-- 如果不是最末页，则显示下翻按钮 -->
+            {% if blog_list1.has_next %}
+                <a href="?page={{ blog_list.next_page_number }}"
+                   class="btn btn-secondary"
+                >
+                    {{ blog_list1.next_page_number }}
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.paginator.num_pages }}"
+                   class="btn btn-success"
+                >
+                    {{ blog_list1.paginator.num_pages }} &raquo;
+                </a>
+            {% endif %}
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+{% endblock %}

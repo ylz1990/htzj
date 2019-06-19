@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>福建汉唐中金事业有限公司</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/banner.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/nav.js' %}"></script>
+</head>
+
+
+
+<body>
+
+<div id="header">
+  <div class="logo"><a href="#"><img src="{% static 'images/htzj_logo.png' %}" width="333px" height="92px" /></a></div>
+  <div class="nav">
+    <div class="languages"><A href="#" class="bg">中文</A>|<a href="#"><b>English</b></a></div>
+               <ul>
+      <li  class="last"><a href='{% url "contant" %}'>联系我们</a>
+        <div class='secondary n2'>
+          <div class='secondary2'>
+          <p><a href='#'>在线留言</a></p>
+          <p><a href='#'>联系方式</a></p>
+          </div>
+          <div class='img-li'><img src='{% static "images/1-1302251S924393.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li  style="width:76px;"><a href='{% url "download" %}'>下载中心</a></li>
+      <li  style="width:86px;"><a href='{% url "case" %}'>成功案例</a>
+      </li>
+      <li><a href='{% url "products" %}'>产品中心</a>
+        <div class='secondary'>
+          <div class='secondary2'>
+          <p><a href='#'>贵金属</a></p>
+          <p><a href='#'>贵金属</a></p>
+          <p><a href='#'>贵金属</a></p>
+          <p><a href='#'>贵金属</a></p>
+          <p><a href='#'>贵金属</a></p>
+          <p><a href='#'>更多...</a></p>
+          </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SS4W9.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href='{% url "news" %}'>新闻中心</a>
+              <div class='secondary'>
+                <div class='secondary2'>
+                <p><a href="{% url 'news_1' %}">新闻资讯</a></p>
+                <p><a href="{% url 'news_2' %}">行业资讯</a></p>
+                <p><a href="{% url 'news_3' %}">黄金资讯</a></p>
+                </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SKU02.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href='{% url "about" %}'>汉唐中金</a>
+        <div class='secondary'>
+          <div class='secondary2'>
+          <p><a href='#'>公司简介</a></p>
+          <p><a href='#'>企业文化</a></p>
+          <p><a href='#'>经营理念</a></p>
+          <p><a href='#'>企业荣誉</a></p>
+          </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SKU02.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href="{% url 'index' %}">首页</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="banner2"> <img src="{% static 'images/new-banner_02.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#fff">
+<div id="main2">
+
+  <div class="tittle"></div>
+
+   <div class="tittle2">新闻资讯 / <b>News</b></div>
+
+  <div class="left">
+
+    <div class="left-nav">
+
+      <ul>
+        <li><a href="#" class="red">新闻资讯</a></li>
+        <li><a href="#">行业咨询</a></li>
+        <li><a href="#">展会信息</a></li>
+        <li></li>
+      </ul>
+
+    </div>
+
+   <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right">
+
+    <div class="weizhi">您现在的位置：<a href='#'>文章编辑</a></div>
+
+    <div class="news-zx">
+    {% for blog in blog_list %}
+    <ul>
+        <li><span><a href=" {% url 'alter' blog.id %}">编辑</a><a href="{% url 'delete' blog.id %}">删除</a></span><a href="{% url 'newlist' blog.id %}">{{ blog.title }}</a></li>
+    </ul>
+    {% endfor %}
+        <div class="page">
+          <!--<span>共<b>4</b>页</span>-->
+<!--<a class="b">1</a>-->
+<!--<a href='#'><img src='images/page_39.jpg' width='34' height='13' /></a>-->
+           {% if blog_list.has_previous %}
+                <a href="?page=1" class="btn btn-success">
+                    &laquo; 1
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.previous_page_number }}"
+                   class="btn btn-secondary"
+                >
+                    {{ blog_list.previous_page_number }}
+                </a>
+            {% endif %}
+
+            <!-- 当前页面 -->
+            <span class="current btn btn-danger btn-lg">
+                {{ blog_list.number }}
+            </span>
+
+            <!-- 如果不是最末页，则显示下翻按钮 -->
+            {% if blog_list.has_next %}
+                <a href="?page={{ blog_list.next_page_number }}"
+                   class="btn btn-secondary"
+                >
+                    {{ blog_list.next_page_number }}
+                </a>
+                <span>...</span>
+                <a href="?page={{ blog_list.paginator.num_pages }}"
+                   class="btn btn-success"
+                >
+                    {{ blog_list.paginator.num_pages }} &raquo;
+                </a>
+            {% endif %}
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+<div id="footer">
+  <div class="foot-l">
+    <p class="affiliated"> 
+    <a href="#" target="_blank">法律条款</a><span>|</span>
+    <a href="#" target="_blank">隐私声明</a><span>|</span>
+    <a href="#" target="_blank">站点地图</a><span>|</span>
+    <a href="#" target="_blank">联系方式</a><span>|</span>
+    <a href="#" target="_blank">关于我们</a> </p>
+
+    <div class="icu">Copyright © 2015 福建汉唐中金事业有限公司 All Rights Reserved <br/>更多资讯：<a href="https://www.sge.com.cn/" target="_blank">上海黄金交易所</a></div>
+
+  </div>
+  <div class="foot-r">
+    <p>客户服务热线：<span>400-966-7059</span></p>
+  </div>
+</div>
+</body>
+</html>
+

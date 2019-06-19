@@ -1,0 +1,60 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}" class="red">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>黄金投资</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">黄金投资</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/10.jpeg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>黄金投资</strong>，黄金长久以来一直是一种投资工具。它价值高，并且是一种独立的资源，不受限于任何国家或贸易市场，
+             它与公司或政府也没有牵连。因此，投资黄金通常可以帮助投资者避免经济环境中可能会发生的问题，而且，黄金投资是世界上税务负担最轻的投资项目。
+             黄金投资意味着投资于金条、金币、甚至金饰品，投资市场中存在着众多不同种类的黄金帐户。黄金是一种化学元素，具有稳定的化学性质，在自然状态下几乎不与任何物质发生化学反应。
+             黄金具有金灿灿的光泽，质地柔软，十分容易加工成人们需要的形状。黄金19.6克/立方厘米，是密度最大的物质之一，便于携带。黄金是一种稀缺的自然资源，
+             由于黄金具有美丽的光泽，自然稀少及优良的物理和化学性质，为各时期人们宠爱。在可考的人类五千年文明史中，没有任何一种物质像黄金一样，
+             与社会演化和社会经济缔结成如此密切的关系，成为悠久的货币的载体、财富和身份的象征。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

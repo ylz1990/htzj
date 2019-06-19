@@ -1,0 +1,59 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}" class="red">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>COMEX黄金</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">COMEX黄金</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/4.jpeg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>COMEX黄金</strong>，COMEX黄金是纽约商品交易所（芝加哥商业交易所集团）其中的一个交易品种，简称纽约金，属于美式黄金交易（American gold trading)。
+             美式黄金则是以美国的纽约商品交易所（COMEX）和芝加哥商品交易所（IMM）为代表的黄金市场实际上建立在典型的期货市场基础上，其交易类似于在该市场上进行交易的其它种商品。
+             期货交易所作为一个非赢利性机构，本身不参加交易，只是为交易提供场地、设备，同时制定有关法规，确保交易公平、公正地进行，对交易进行严格监控。
+             纽约和芝加哥黄金市场是20世纪70年代中期发展起来的，主要原因是1977年后，美元贬值，美国人(主要是以法人团体为主)为了套期保值和投资增值获利，使得黄金期货迅速发展起来。
+             目前纽约商品交易所(COMEX)和芝加哥商品交易所(IMM)是世界最大的黄金期货交易中心。两大交易所对黄金现货市场的金价影响很大。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

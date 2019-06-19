@@ -1,0 +1,162 @@
+﻿{% extends 'htzj/base.html' %}
+{% load static %}
+{% block main %}
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+            <li><a href='{% url "product_list"%}'>&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">您现在的位置：<a href='{% url "about" %}'>汉唐中金</a> > <a href='#'>黄金学院</a></div>
+    <div class="Pro_Div">
+        <ul>
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'product_list'%}" title="黄金T+D" hidefocus="true">
+                   <img class="img" src="{% static 'images/2.jpeg' %}" width="170" height="115" alt="黄金T+D">
+              </a>
+              <span>
+                <a href="{% url 'product_list'%}" title="黄金T+D">黄金T+D</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college2' %}" title="纸黄金" hidefocus="true">
+                   <img class="img" src="{% static 'images/3.jpg' %}" width="170" height="115" alt="纸黄金">
+              </a>
+              <span>
+                <a href="{% url 'gold_college2' %}" title="纸黄金">纸黄金</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college3' %}" title="COMEX黄金" hidefocus="true">
+                   <img class="img" src="{% static 'images/4.jpeg' %}" width="170" height="115" alt="COMEX黄金">
+              </a>
+              <span>
+                <a href="{% url 'gold_college3' %}" title="COMEX黄金">COMEX黄金</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college4' %}" title="伦敦金" hidefocus="true">
+                   <img class="img" src="{% static 'images/5.jpeg' %}" width="170" height="115" alt="伦敦金">
+              </a>
+              <span>
+                <a href="{% url 'gold_college4' %}" title="伦敦金">伦敦金</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college5' %}" title="金条" hidefocus="true">
+                   <img class="img" src="{% static 'images/6.jpg' %}" width="170" height="115" alt="金条">
+              </a>
+              <span>
+                <a href="{% url 'gold_college5' %}" title="金条">金条</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college6' %}" title="贵金属" hidefocus="true">
+                   <img class="img" src="{% static 'images/7.jpeg' %}" width="170" height="115" alt="贵金属">
+              </a>
+              <span>
+                <a href="{% url 'gold_college6' %}" title="贵金属">贵金属</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college7' %}" title="投资技巧" hidefocus="true">
+                   <img class="img" src="{% static 'images/8.jpg' %}" width="170" height="115" alt="投资技巧">
+              </a>
+              <span>
+                <a href="{% url 'gold_college7' %}" title="投资技巧">投资技巧</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+
+          <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college8' %}" title="黄金投资" hidefocus="true">
+                   <img class="img" src="{% static 'images/10.jpeg' %}" width="170" height="115" alt="黄金投资">
+              </a>
+              <span>
+                <a href="{% url 'gold_college8' %}" title="黄金投资">黄金投资</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+                    <li>
+            <div class="proju">
+              <a class="a_img" href="{% url 'gold_college9' %}" title="黄金学堂" hidefocus="true">
+                   <img class="img" src="{% static 'images/11.jpeg' %}" width="170" height="115" alt="黄金学堂">
+              </a>
+              <span>
+                <a href="{% url 'gold_college9' %}" title="黄金学堂">黄金学堂</a>
+              </span>
+           <!-- <a href="#" title="黄金交易实时价格"><img src="images/more3.jpg" width="46" height="10"></a>
+            -->
+            </div>
+          </li>
+        </ul>
+        <div style="clear:botn"></div><br/>
+        <div class="Pro_Pg"><!--分页--></div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

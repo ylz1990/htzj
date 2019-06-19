@@ -1,0 +1,61 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}" class="red">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>纸黄金</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">纸黄金</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/3.jpg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>纸黄金</strong>，“纸黄金”是一种个人凭证式黄金，投资者按银行报价在账面上买卖“虚拟”黄金，
+             个人通过把握国际金价走势低吸高抛，赚取黄金价格的波动差价。投资者的买卖交易记录只在个人预先开立的“黄金存折账户”上体现，不发生实金提取和交割。
+         “纸黄金”在外汇中的概念：特别提款权是国际货币基金组织创设的一种用于会员国之间结算国际收支逆差的储备资产和记账单位。
+             纸黄金又称“特别提款权”。特别提款权是国际货币基金组织于1969年年会上正式通过决议创设的一种帐面资产，目的在于增加国际储备手段，
+             以调节国际收支逆差。"纸黄金"业务是指投资者在帐面上买进卖出黄金赚取差价获利的投资方式，即使是没有尝试过任何黄金或外汇交易的人，
+             入门也相对容易，只要掌握一些交易技巧并关注市场进展就能有所斩获。
+            纸黄金属于交易类产品，其操作和报价类似外汇宝，虽然黄金市场也有风险，但相比多变的汇市却要稳定和容易掌握得多。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

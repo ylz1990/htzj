@@ -1,0 +1,59 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}" class="red">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>黄金学堂</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">黄金学堂</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/11.jpeg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>黄金学堂</strong>，所谓炒黄金，主要有实物金，纸黄金，黄金现货3种，其中只有实物金可以兑现金条，但收益比股票小很多，电子软件上交易操作比较常见。
+             炒黄金，除了如何正确判断黄金价格走势之外，还要适当的降低投资成本，大家都知道，黄金交易都会被收取一定的手续费，那么如何降低手续费呢?
+             不同的银行炒黄金手续费率是完全不同的，也就是说对于交易机构的不同选，会直接导致你的手续费用不同。所以，在进行投资之前，了解各个银行的相关手续费是多少，之后选择比较低的那一家就可以有效的降低手续费。
+             但是值得注意的事各个银行的保证金都是相同的，不会有很大的差别，都是百分之十五。黄金投资的手续费对于利润的影响有多大可能投资者们都已经认识到了，这样的高成本，作为投资者如果只是选择简单的接受是很难盈利的，
+             投资者们可以选择相对较低的黄金投资渠道降低自己的交易成本。通常情况下，黄金交易的手续费都是通过银行收取的不同的。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

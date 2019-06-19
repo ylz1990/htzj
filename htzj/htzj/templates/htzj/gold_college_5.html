@@ -1,0 +1,59 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}" class="red">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>金条</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">金条</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/6.jpg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>金条</strong>，金市场上的投资品种主要分为实物黄金投资和在实物黄金基础之上派生出来的黄金投资衍生品，衍生品主要有黄金期货、黄金期权等等，
+             而实物黄金投资则主要有金条、金币和金饰品等等。金条来源于古代的货币流通，更多应用于收藏和投资领域，全球各大银行及金融机构都储备和流通有自己署名金条，
+             比如上海黄金交易所标准金条。从价值取向来看，金饰品主要体现为观赏价值，购买时由于加工费用、工艺费用比较高，以及企业本身的利润需求，
+             使得价格相对于金原料而言的溢价较高，其溢价幅度一般都会超过20% ,而金饰品要变现又将面临很高的折价，折价的幅度常常会超过30%，金饰品如果要直接向一般的金店进行回售，
+             其价格将远远低于同期上海黄金交易所金含量相同的金原料价格，因此作为纯投资而言，金饰品不适合做黄金投资，难以实现黄金投资价值的取向
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

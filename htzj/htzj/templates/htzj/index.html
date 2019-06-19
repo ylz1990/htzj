@@ -1,0 +1,95 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner">
+
+  <div class="dw">
+
+    <div class=slide> 
+
+	<a class="banner_a" style="display: none" id="focus1"><img src="{% static 'images/htzj_ban.jpg' %}" width="1440" height="485"></a>
+
+	<a class="banner_a" id="focus2"><img src="{% static 'images/banner_02.jpg' %}" width="1440" height="485"></a>
+
+	<a class="banner_a" style="display: none" id="focus3"><img src="{% static 'images/banner_03_02.jpg' %}" width="1440" height="485"></a>
+
+      <ul>
+
+        <li id="change1" onmousemove="setFocus(1)">
+
+          <dl>
+            <dt><a href="#"><img src="{% static 'images/img_03.jpg'%}"></a></dt>
+            <dd class="tl"><a href="#">经营理念</a></dd>
+            <dd style="*margin-top:-20px;"><a href="#">我们秉承价值投资理念强调通过精深研究发现</a></dd>
+          </dl>
+
+        </li>
+        <li id="change2" onmousemove="setFocus(2)">
+          <dl>
+            <dt><a href="#"><img src="{% static 'images/img_05.jpg'%}"></a></dt>
+            <dd class="tl"><a href="#">我们的宗旨</a></dd>
+            <dd style="*margin-top:-20px;"><a href="#">提供“达标、准时、快速响应”的产品和服务</a></dd>
+          </dl>
+        </li>
+
+        <li id="change3" class="current" onmousemove="setFocus(3)">
+          <dl>
+            <dt><a href="#"><img src="{% static 'images/img_07.jpg'%}"></a></dt>
+            <dd class="tl"><a href="#">管理团队</a></dd>
+            <dd style="*margin-top:-20px;"><a href="#">志同道合，丰富的企业运作与投资经验。</a></dd>
+          </dl>
+
+        </li>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <script type=text/javascript>var rollPeriod = 3000;var rollCount = 3;setFocus(1);</script> 
+
+</div>
+
+<div id="main" style="width: 1160px;border-bottom: 1px #ddd solid">
+  <div class="new">
+  <h2><a href="{% url 'news_1' %}">新闻资讯</a></h2>
+    <ul style="overflow: hidden;">
+        {% for blog in blog_list %}
+          {% if blog.new_type == "['新闻资讯']" %}
+    <li><a href="{% url 'newlist' blog.id %}" style="width:250px; overflow:hidden; display:inline-block;height:26px;float: left">{{ blog.title }}</a><span>{{ blog.pub_time|date:"Y-m-d" }}</span></li>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="new" style="padding-left: 10px">
+
+  <h2><a href="{% url 'news_2' %}">行业资讯</a></h2>
+
+    <ul style="overflow: hidden;">
+      {% for blog in blog_list %}
+      {% if blog.new_type == "['行业资讯']" %}
+    <li><a href="{% url 'newlist' blog.id %}" style="width:250px; overflow:hidden; display:inline-block;height:26px;float: left">{{ blog.title }}</a><span>{{ blog.pub_time|date:"Y-m-d" }}</span></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+
+  <div class="new" style="padding-left: 10px">
+
+  <h2><A href="{% url 'news_3' %}">黄金资讯</A></h2>
+    <ul style="overflow: hidden;">
+      {% for blog in blog_list %}
+      {% if blog.new_type == "['黄金资讯']" %}
+          <li><a href="{% url 'newlist' blog.id %}" style="width:250px; overflow:hidden; display:inline-block;height:26px;float: left">{{ blog.title }}</a><span>{{ blog.pub_time|date:"Y-m-d" }}</span></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+</div>
+{% endblock %}

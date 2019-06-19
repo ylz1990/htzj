@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- Description, Keywords and Author -->
+<meta name="description" content="汉唐中金" />
+<meta name="keywords" content="汉唐中金" />
+<meta name="author" content="汉唐中金" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+<title>福建汉唐中金实业有限公司</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/banner.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/nav.js' %}"></script>
+  <style>
+    #header1{width:1002px;height:30px; margin:0 auto;line-height: 30px;font-size: 12px;
+    color:grey;
+    }
+  </style>
+
+</head>
+
+<body>
+<div  id="header1"><span>福建汉唐中金实业有限公司</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>把握人生机遇，彰显精彩人生</span></div>
+<div id="header">
+  <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/htzj_logo.png' %}" width="300px" height="100px" alt="福建汉唐中金实业"/></a></div>
+  <div class="nav">
+    <div class="languages"><a href="{% url 'index' %}" class="bg">福建</a>|<a href="{% url 'index' %}"><b>汉唐</b></a></div>
+    
+            <ul>
+      <li  class="last"><a href='{% url "contant" %}'>联系我们</a></li>
+      <li  style="width:76px;"><a href='{% url "download" %}' rel="nofollow">登录中心</a></li>
+      <li  style="width:86px;"><a href='{% url "case" %}'>大咖论道 </a>
+      </li>
+      <li><a href='{% url "products" %}'>黄金学院</a>
+        <div class='secondary'>
+          <div class='secondary2'>
+          <p><a href="{% url 'product_list'%}">黄金T+D</a></p>
+          <p><a href="{% url 'gold_college2' %}">纸黄金</a></p>
+          <p><a href="{% url 'gold_college3' %}">COMEX黄金</a></p>
+          <p><a href="{% url 'gold_college4' %}">伦敦金</a></p>
+          <p><a href="{% url 'gold_college5' %}">金条</a></p>
+          <p><a href='{% url "products" %}'>更多...</a></p>
+          </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SS4W9.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href='{% url "news" %}'>新闻中心</a>
+              <div class='secondary'>
+                <div class='secondary2'>
+                <p><a href="{% url 'news_1' %}">新闻资讯</a></p>
+                <p><a href="{% url 'news_2' %}">行业资讯</a></p>
+                <p><a href="{% url 'news_3' %}">黄金资讯</a></p>
+                </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SKU02.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href='{% url "about" %}'>汉唐中金</a>
+        <div class='secondary'>
+          <div class='secondary2'>
+          <p><a href="{% url 'about' %}">公司简介</a></p>
+          <p><a href="{% url 'about_1' %}">经营理念</a></p>
+          <p><a href="{% url 'about_2' %}">企业荣誉</a></p>
+          </div>
+          <div class='img-li'><img src='{% static "images/1-1302251SKU02.jpg" %}' width='104' height='67' /></div>
+        </div>
+      </li>
+      <li><a href="{% url 'index' %}">首页</a></li>
+    </ul>
+  </div>
+</div>
+{% block main %}
+{% endblock %}
+<div id="footer" >
+  <div class="foot-l" style="padding-top: 15px">
+    <p class="affiliated"> 
+    <a href="#" target="_blank">法律条款</a><span>|</span>
+    <a href="#" target="_blank">隐私声明</a><span>|</span>
+    <a href="#" target="_blank">站点地图</a><span>|</span>
+    <a href="#" target="_blank">联系方式</a><span>|</span>
+    <a href="#" target="_blank">关于我们</a> </p>
+
+    <div class="icu"><p>福建汉唐中金实业有限公司</p>
+      Copyright © 2015 福建汉唐中金实业有限公司 All Rights Reserved <br/>
+      友情链接：<a href="https://www.sge.com.cn/" target="_blank">上海黄金交易所</a>
+    </div>
+  </div>
+  <div class="foot-r" style="padding-top: 15px">
+    <p>客户服务热线：<span>400-966-7059</span></p>
+  </div>
+</div>
+{% block script %}
+{% endblock %}
+</body>
+</html>
+

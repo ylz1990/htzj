@@ -1,0 +1,60 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}" class="red">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>投资技巧</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">投资技巧</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/8.jpg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>投资技巧</strong>，黄金价格的报价变化都通过K线图呈现，而通过分析可以得出市场的阻力位和支撑位，当金价突破了阻力位或者支撑位的时候，投资者可以在这时候追单，但是追单不宜过多，
+             在3-5美元追单就行，过多追单，市场收缩就变成了亏损。当一些国际消息或者经济数据公布的时候，黄金的价格变化会很明显，比如说非农数据的公布。投资者可以在这些数据公布前，结合自己的分析实施追单，这样可以提前获得盈利。
+             同样的，在数据公布的过程中，投资者实时关注并随时做出下一步操作。在欧美市场开盘的时候，会因为一些数据的公布或者市场的主力下单，
+             市场的波动会变得比较剧烈，在欧美市场的交易时间里，投资者可以适当地追单，但不宜过多，因为市场风向还不是很明显。当买入后有一定的盈利时，一心想追求最高的利润，希望不断上涨或下跌，获得更大的利益，迟迟不愿意平仓，结果当价格反向运行时，不但利润全无，反而被套亏损了。
+             是贪婪和侥幸心理造成了散户的亏损累累，而不是其他原因。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

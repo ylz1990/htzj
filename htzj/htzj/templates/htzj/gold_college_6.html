@@ -1,0 +1,61 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' >&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}" class="red">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>贵金属</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">贵金属</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/7.jpeg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>贵金属</strong>，贵金属投资分为实物投资和带杠杆的电子盘交易投资以及银行类的纸黄金纸白银。其中实物投资是指投资人在对贵金属市场看好的情况下，
+             低买高卖赚取差价的过程。也可以是在不看好经济前景的情况下所采取的一种避险手段，以实现资产的保值增值。
+                电子盘交易是指根据黄金、白银等贵重金属市场价格的波动变化，确定买入或卖出，这种交易一般都存在杠杆，可以用较小的成本套取较大的回报。
+             国家法律、法规、政策以及规章的变化，紧急措施的出台，相关监管部门监管措施的实施，交易中心交易规则的修改等原因，均可能会对投资者的投资产生影响，投资者必须承担由此导致的损失。
+             贵金属作为一种特殊的具有投资价值的商品，其价格受多种因素的影响（如国际经济形势、美元汇率、相关市场走势、政治局势、原油价格等等），
+             这些因素对贵金属价格的影响机制非常复杂，投资者在实际操作中难以全面把握，
+             因而存在出现投资失误的可能性，如果不能有效控制风险，则可能遭受较大的损失，投资者必须独自承担由此导致的一切损失。
+         </span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}

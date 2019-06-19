@@ -1,0 +1,53 @@
+{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/1418723619.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">汉唐中金 / <b>About us</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <li><a href='#' class='red'>公司简介</a></li>
+  			<li><a href="{% url 'about' %}">团队介绍</a></li>
+  			<li><a href="{% url 'about_1' %}">经营理念</a></li>
+  			<li><a href="{% url 'about_2' %}">企业荣誉</a></li>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">您现在的位置：<a href='#'>汉唐中金</a> > <a href='#'>企业荣誉</a></div>
+    <div class="about-jj">
+      <dl>
+        <dt><img src="{% static 'images/1-13022611415S21.jpg' %}" width="232" height="433" /></dt>
+        <dd>
+          <h1>汉唐中金</h1>
+          <hr style="color: #ddd">
+            <p>企业文化建设与思想政治工作是两个不同概念的工作，但有着密切的联系，在许多方面是相同、相通和相融的。
+                就研究对象而言，企业文化建设和思想政治工作研究和调节的对象都是“人”，都注重人文关怀，是以人为本，重视人的因素。
+                理解人、尊重人、关心人、教育人，发挥人的积极性和创造性，不仅是建设企业文化的立足点和指导思想，也是思想政治工作的基本原则。 </p>
+            <p>就工作内容而言，企业文化建设和思想政治工作有着共同的工作任务和工作重点，都是通过思想和精神作用来引导员工行为。
+                都要通过开展丰富多彩的寓教于乐文体活动，创造良好的人际环境；
+                都要通过选树先进典型事迹，彰显人格魅力，营造比、学、赶、帮、超的工作氛围。</p>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

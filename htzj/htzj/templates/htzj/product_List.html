@@ -1,0 +1,59 @@
+﻿{% extends 'htzj/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div id="banner2"> <img src="{% static 'images/20146122528.jpg' %}" width="1440" height="214" /> </div>
+<div style="background:#FFF; width:100%;">
+<div id="main2">
+  <div class="tittle"></div>
+  <div class="tittle2">黄金学院 / <b>Gold College</b></div>
+  <div class="left">
+    <div class="left-nav">
+      <ul>
+        <ul>
+            <li><a href='{% url "product_list"%}' class="red">&nbsp;&nbsp;黄金T+D</a></li>
+  			<li><a href="{% url 'gold_college2' %}">&nbsp;&nbsp;纸黄金</a></li>
+  			<li><a href="{% url 'gold_college3' %}">&nbsp;&nbsp;COMEX黄金</a></li>
+  			<li><a href="{% url 'gold_college4' %}">&nbsp;&nbsp;伦敦金</a></li>
+            <li><a href="{% url 'gold_college5' %}">&nbsp;&nbsp;金条</a></li>
+            <li><a href="{% url 'gold_college6' %}">&nbsp;&nbsp;贵金属</a></li>
+            <li><a href="{% url 'gold_college7' %}">&nbsp;&nbsp;投资技巧 </a></li>
+            <li><a href="{% url 'gold_college8' %}">&nbsp;&nbsp;黄金投资</a></li>
+            <li><a href="{% url 'gold_college9' %}">&nbsp;&nbsp;黄金学堂</a></li>
+      </ul>
+      </ul>
+    </div>
+    <div class="phone-bj">
+      <div class="phone">
+        <h2>联系我们 <b>Contact  Us</b></h2>
+        <div class="phone-cn">
+          <p>传真：0576-12345678</p>
+          <p>电话：0576-12345678</p>
+          <p>邮箱：web@xxxxxx.com</p>
+          <p>地址：福建省福州市汉唐中金实业有限公司</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="weizhi">福建汉唐中金：<a href="{% url 'products'%}">黄金学院</a> > <a href='#'>黄金T+D</a></div>
+    <div class="Pro_Div">
+       <div class="Pro_Title">黄金T+D</div>
+       <div class="Pro_PicCd" >
+         <div class="P_picCord" style="padding: 10px"><img src="{% static 'images/2.jpeg' %}" width="280" height="185" ></div>
+         <span style="font-size: 20px"><strong>黄金t+d</strong>，是指由上海黄金交易所统一制定的、规定在将来某一特定的时间和地点交割一定数量标的物的标准化合约。T+D里的"T"是Trade（交易）的首字母，
+             "D"是Delay（延期）的首字母。这种买卖是由转移价格波动风险的生产经营者和承受价格风险而获利的风险投资者参加的，在交易所内依法公平竞争而进行的，
+             并且有保证金制度为保障。保证金制度的一个显著特征是用较少的钱做较大的买卖，保证金一般为合约值的6%-9%，与股票投资相比较，投资者在黄金T+D市场上投资资金比其他投资要小得多，
+             俗称“以小搏大”。黄金t+d的特点是以保证金方式进行买卖，交易者可以选择当日交割，也可以无限期的延期交割。黄金t+d的投资者不能在当前价格立即建仓，
+             而是需要先设立一个价格和数量，然后等到市场发现完全吻合的交易对手才能建仓。因为投资者提交建仓申请后需要等待，很多时候会因为等待系统撮合而错失投资时机。
+             黄金t+d交易的市场区域仅限国内，成交量及活跃度远不及国际市场。</span>
+         </div>
+
+       </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{% endblock %}
