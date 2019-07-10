@@ -1,0 +1,76 @@
+﻿{% extends 'product/base_info.html' %}
+            {% block container %}
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="{% url 'htzj:index' %}">首页</a></li>
+                        <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                        <li><span>财富管理</span></li>
+                    </ol>
+                </div>
+                <div class="product-info">
+                    <div class="am-u-sm-12 am-u-md-6">
+                           <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}'>
+                                <ul class="am-slides">
+                                    <li data-thumb="../../static/images/pro_17.png">
+                                        <img src="../../static/images/pro_17.png">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_18.jpg">
+                                        <img src="../../static/images/pro_18.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_19.jpg">
+                                        <img src="../../static/images/pro_19.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_20.jpg">
+                                        <img src="../../static/images/pro_20.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="am-u-sm-12 am-u-md-6">
+                        <div class="prodct-info-canshu">
+                            <ul>
+                                <li><span>功能介绍：</span>随着衍生品投资的发展，涉及衍生品的理财产品市场日新月异，眼花缭乱，秉承“为客户创造价值”的理念，深入分析研究，为高净值个人客户提供全方位、立体化的理财咨询服务。</li>
+                                <li><span>服务内容：</span> 1、理财咨询•产品介绍•产品分析•产品比较  2、企业面临的风险源界定  3、企业整体风险架构构建  4、企业风险管理措施 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-12  am-u-md-12">
+                        <div class="product_tabs">
+                            <div class="am-tabs" data-am-tabs>
+                                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                    <li class="am-active"><a href="#tab1"> 一、功能介绍：</a></li>
+                                    <li><a href="#tab2">二、用户定位：</a></li>
+                                    <li><a href="#tab3">三、服务内容：</a></li>
+                                    <li><a href="#tab4">四、服务流程：</a></li>
+                                </ul>
+                                <div class="am-tabs-bd">
+                                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                       随着衍生品投资的发展，涉及衍生品的理财产品市场日新月异，眼花缭乱，秉承“为客户创造价值”的理念，深入分析研究，为高净值个人客户提供全方位、立体化的理财咨询服务。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab2">
+                                        秉承“为客户创造价值”的理念，深入分析研究，为高净值个人客户提供全方位、立体化的理财咨询服务
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab3">
+                                            1、理财咨询•产品介绍•产品分析•产品比较  2、企业面临的风险源界定  3、企业整体风险架构构建  4、企业风险管理措施
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab4">
+                                            1，客户向业务部门、产品开发部、或者拨打60888820628（客服热线）进行咨询；
+                                            2，针对客户的个性化需求，业务部门或客服人员向产品开发部提交申请；
+                                            3，产品开发部和相关部门沟通，出具《解决方案》；
+                                            4，产品开发部联系业务部门或客服人员，提供《解决方案》；
+                                            5，与客户签署相关协议；
+                                            6，产品开发部协调方案执行。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

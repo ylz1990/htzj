@@ -1,0 +1,96 @@
+﻿{% extends 'product/base_info.html' %}
+            {% block container %}
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="{% url 'htzj:index' %}">首页</a></li>
+                        <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                        <li><span>名家策略</span></li>
+                    </ol>
+                </div>
+                <div class="product-info">
+                    <div class="am-u-sm-12 am-u-md-6">
+                           <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}'>
+                                <ul class="am-slides">
+                                    <li data-thumb="../../static/images/pro_9.jpg">
+                                        <img src="../../static/images/pro_9.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_10.jpg">
+                                        <img src="../../static/images/pro_10.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_11.jpg">
+                                        <img src="../../static/images/pro_11.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_12.jpg">
+                                        <img src="../../static/images/pro_12.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="am-u-sm-12 am-u-md-6">
+                        <div class="prodct-info-canshu">
+                            <ul>
+                                <li><span>功能介绍：</span>探寻商品产业链的定价机制，分析影响因素，掌握和了解该品种的期货定价机制、运行特点以及内外盘的联动规律，帮助企业参与期货风险管理。</li>
+                                <li><span>服务内容：</span>1、期货定价机制、运行特点
+                                                2、期货品种的内外盘的联动规律
+                                                3、产业链分析
+                                                •各环节的主体特征
+                                                •各环节运作特点
+                                                •各环节定价机制
+                                                •各环节价值传导机制
+                                                4、影响因素分析
+                                                •因素特征
+                                                •因素影响力度
+                                                •因素持续时间</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-12  am-u-md-12">
+                        <div class="product_tabs">
+                            <div class="am-tabs" data-am-tabs>
+                                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                    <li class="am-active"><a href="#tab1"> 一、功能介绍：</a></li>
+                                    <li><a href="#tab2">二、用户定位：</a></li>
+                                    <li><a href="#tab3">三、服务内容：</a></li>
+                                    <li><a href="#tab4">四、服务流程：</a></li>
+                                </ul>
+                                <div class="am-tabs-bd">
+                                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                       探寻商品产业链的定价机制，分析影响因素，掌握和了解该品种的期货定价机制、运行特点以及内外盘的联动规律，帮助企业参与期货风险管理。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab2">
+                                        有初步风险管理需求的企业投资者、对期货品种、现货品种定价机制有需求的企业、个人用户。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab3">
+                                            1、期货定价机制、运行特点
+                                                2、期货品种的内外盘的联动规律
+                                                3、产业链分析
+                                                •各环节的主体特征
+                                                •各环节运作特点
+                                                •各环节定价机制
+                                                •各环节价值传导机制
+                                                4、影响因素分析
+                                                •因素特征
+                                                •因素影响力度
+                                                •因素持续时间
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab4">
+                                            1，客户向业务部门、产品开发部、或者拨打60888820628（客服热线）进行咨询；
+                                            2，针对客户的个性化需求，业务部门或客服人员向产品开发部提交申请；
+                                            3，产品开发部和相关部门沟通，出具《解决方案》；
+                                            4，产品开发部联系业务部门或客服人员，提供《解决方案》；
+                                            5，与客户签署相关协议；
+                                            6，产品开发部协调方案执行。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

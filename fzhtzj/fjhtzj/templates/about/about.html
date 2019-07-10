@@ -1,0 +1,48 @@
+﻿{% extends 'htzj/base.html' %}
+{% block main %}
+    <div class="com-container">
+        <div class="cms-g">
+             <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                 <div class="com-nav-left">
+                     <h1><em>关于我们</em><i>ABOUT US</i></h1>
+                        <ul >
+                            <li class="on"><a href="{% url 'about:company' %}">公司简介</a></li>
+                            <li><a href="{% url 'about:company_2' %}">企业文化</a></li>
+                            <li><a href="{% url 'about:company_3' %}">经营理念</a></li>
+                        </ul>
+                     </div>
+             </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>公司简介</span>
+                </div>
+                <div class="com-nav-content">
+                    <h1>福建汉唐紫金实业有限公司</h1>
+                    <p>福建汉唐紫金实业有限公司，成立于2016年10月26日 ，公司以坚持服务实体经济和金融市场的产业发展为原则，致力于打造专业，可靠，权威，诚信的期货投资服务平台。</p>
+                    <h2>企业简介</h2>
+                    <p>福建汉唐紫金实业有限公司，公司注册资本5000万元，总部设在福建省福州市晋安区--立洲集团总部大厦，经营范围为黄金交易，
+                        同时提供金融衍生品和大宗商品相关领域投资管理及咨询信息服务等，为客户提供综合性、专业性、一站式服务，致力于成为行业权威及值得信赖的中国金融投资旗舰。</p>
+                    <h2>产品优势</h2>
+                    <p>1：成本低廉：交易保证金为11%，降低了投资门槛。</p>
+                    <p>2：开户及交易简便：开户只需要带着本人身份证到指定银行开通网上银行即可。操作交易也是在银行网银系统里操作。</p>
+                    <p>3：资金安全：指定银行对客户的资金实行专户管理，确保客户资金安全。</p>
+                    <p>4：系统先进：银行个人贵金属延期交易系统具有先进的交易管理、风险控制及保证金。</p>
+                    <p>5：管理功能，客户界面清晰、系统稳定性高。</p>
+                    <p>6：价格透明：交易报价与上海黄金交易所系统实时同步，信息公开。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司简介</a></li>
+                    <li><a href="#">企业文化</a></li>
+                    <li><a href="#">经营理念</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

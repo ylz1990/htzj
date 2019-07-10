@@ -1,0 +1,54 @@
+﻿{% extends 'htzj/base.html' %}
+{% block main %}
+    <div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>投资学院</em><i>Investment College</i></h1>
+                    <ul>
+                        <li><a href="{% url 'college:case_list' %}">实时快讯</a></li>
+                        <li><a href="{% url 'college:case_list2' %}">专家点评</a></li>
+                        <li><a href="{% url 'college:case_list3' %}">数据中心</a></li>
+                        <li><a href="{% url 'college:case_list4' %}">合作资源</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                </div>
+
+                <div class="com-nav-content">
+                    <p style="font-size: large;text-align: center"><strong>{{ new.title }}</strong></p>
+                    <p style="font-size: medium;text-align: center"><strong>{{ new.create_date }}</strong></p>
+                    <p>{{ new.content| safe }}</p>
+                </div>
+                <div class="com-info-page">
+                    {% if previoud_new %}
+                        <p>上一篇: <a href="{% url 'college:case_info' previoud_new.id %}">{{ previoud_new.title }}</a></p>
+                    {% else %}
+                        暂无最新
+                    {% endif %}
+                    {% if next_new %}
+                    <p>下一篇: <a href="{% url 'college:case_info' next_new.id %}">{{ next_new.title }}</a></p>
+                    {% else %}
+                        已经到末尾了
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li><a href="{% url 'college:case_list' %}">实时快讯</a></li>
+                        <li><a href="{% url 'college:case_list2' %}">专家点评</a></li>
+                        <li><a href="#">数据中心</a></li>
+                        <li><a href="#">合作资源</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

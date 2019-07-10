@@ -1,0 +1,101 @@
+﻿{% extends 'htzj/base.html' %}
+{% block main %}
+
+    <div class="index-nav">
+        <div class="cms-g">
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-3">
+                <div class="index-nav-item">
+                    <div class="index-nav-img">
+                        <img src="../../static/images/nav_01.png" style="height: 117.11px;width: 97.8px"/>
+                    </div>
+                    <div class="index-nav-info">
+                        <h1>实时快讯</h1>
+                        <h2>分秒必争 快人一步</h2>
+                        <em class="font"><a href="{% url 'college:case_list' %}">详细介绍&#xe72f;</a></em>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-3">
+                <div class="index-nav-item">
+                    <div class="index-nav-img">
+                        <img src="../../static/images/6.jpg" style="height: 117.11px;width: 97.8px"/>
+                    </div>
+                    <div class="index-nav-info">
+                        <h1>专家点评</h1>
+                        <h2>名师点拨 专业视角</h2>
+                        <em class="font"><a href="{% url 'college:case_list2' %}">详细介绍&#xe72f;</a></em>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-3">
+                <div class="index-nav-item">
+                    <div class="index-nav-img">
+                        <img src="../../static/images/3.jpg" style="height: 117.11px;width: 97.8px"/>
+                    </div>
+                    <div class="index-nav-info">
+                        <h1>数据中心</h1>
+                        <h2>全球数据 一网打尽</h2>
+                        <em class="font"><a href="{% url 'college:case_list4' %}">详细介绍&#xe72f;</a></em>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-3">
+                <div class="index-nav-item">
+                    <div class="index-nav-img">
+                        <img src="../../static/images/4.jpeg" style="height: 117.11px;width: 97.8px"/>
+                    </div>
+                    <div class="index-nav-info">
+                        <h1>合作资源</h1>
+                        <h2>强强联手 合作共赢</h2>
+                        <em class="font"><a href="{% url 'college:case_list3' %}">详细介绍&#xe72f;</a></em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="index-content">
+        <div class="cms-g">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-left">
+                        <h1>汉唐紫金</h1>
+                        <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                            <ul class="am-slides">
+                                <li><img src="../../static/images/10.jpeg" /></li>
+                                <li><img src="../../static/images/11.jpeg" /></li>
+                                <li><img src="../../static/images/8.jpg" /></li>
+                                <li><img src="../../static/images/7.jpeg" /></li>
+                                <li><img src="../../static/images/6.jpg" /></li>
+                                <li><img src="../../static/images/5.jpeg" /></li>
+                            </ul>
+                        </div>
+                        <strong><a href="{% url 'about:company' %}" target="_blank">福建汉唐紫金实业有限公司，成立于2016年10月26日，公司以坚持服务实体经济和金融市场的产业发展为原则，致力于打造专业，可靠，权威，诚信的期货投资服务平台。</a></strong>
+                        <em><a href="{% url 'about:company' %}" target="_blank">详情介绍<i class="font">&#xe78d;</i></a></em>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-center">
+                    <h1>新闻动态<a href="{% url 'news:new_list' %}">MORE<i class="font">&#xe78d;</i></a></h1>
+                    <ul>
+                        {% for new in news %}
+                            <li><a href="{% url 'news:new_info' new.id %}"><span>{{ new.title }} </span><em>{{ new.create_date|date:"Y-m-d" }}</em></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-right">
+                    <h1>投资学院<a href="{% url 'college:case_list' %}">MORE<i class="font">&#xe78d;</i></a></h1>
+                    <img src="../../static/images/index_right.jpg"/>
+                    <ul>
+                        {% for new in realnews %}
+                            <li><a href="{% url 'college:case_info' new.id %}">{{ new.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

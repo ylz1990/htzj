@@ -1,0 +1,80 @@
+﻿{% extends 'product/base_info.html' %}
+            {% block container %}
+
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="{% url 'htzj:index' %}">首页</a></li>
+                        <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                        <li><span>机构精评</span></li>
+                    </ol>
+                </div>
+                <div class="product-info">
+                    <div class="am-u-sm-12 am-u-md-6">
+                           <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}'>
+                                <ul class="am-slides">
+                                    <li data-thumb="../../static/images/pro_4.jpeg">
+                                        <img src="../../static/images/pro_4.jpeg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_1.jpeg">
+                                        <img src="../../static/images/pro_1.jpeg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_2.jpeg">
+                                        <img src="../../static/images/pro_2.jpeg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_3.png">
+                                        <img src="../../static/images/pro_3.png">
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="am-u-sm-12 am-u-md-6">
+                        <div class="prodct-info-canshu">
+                            <ul>
+                                <li><span>功能介绍：</span>我公司向广大投资者提供程序化交易信号提示、主观交易信号提示等咨询服务，帮助投资者把握市场脉搏，锻炼自己的盘感，有效提升自己的交易能力。</li>
+                                <li><span>服务内容：</span>我们具有较长时间模拟交易的数据跟踪记录，对交易信号所产生的收益进行持久的统计，以日线趋势为主流交易周期的信号体系，采用多品种分散投资原理拟合模拟交易账户，对资金管理有明确的规定，供投资者研究参考。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-12  am-u-md-12">
+                        <div class="product_tabs">
+                            <div class="am-tabs" data-am-tabs>
+                                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                    <li class="am-active"><a href="#tab1"> 一、功能介绍：</a></li>
+                                    <li><a href="#tab2">二、用户定位：</a></li>
+                                    <li><a href="#tab3">三、服务内容：</a></li>
+                                    <li><a href="#tab4">四、服务流程：</a></li>
+                                </ul>
+                                <div class="am-tabs-bd">
+                                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                       为了让更多的投资者得到专业交易人员的指导，捕捉住转瞬即逝的交易机会，切实提高交易水平和能力，
+                                        我公司投资咨询部向广大投资者提供交易信号提示咨询服务。服务内容有：程序化交易信号提示、主观交易信号提示。
+                                            我们期望通过这些服务，帮助投资者把握市场脉搏，锻炼自己的盘感，最快最有效的提升自己的交易能力。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab2">
+                                        希望得到专业人士指点的投资者。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab3">
+                                            我们具有较长时间模拟交易的数据跟踪记录，对交易信号所产生的收益进行持久的统计，以日线趋势为主流交易周期的信号体系，
+                                        采用多品种分散投资原理拟合模拟交易账户，对资金管理有明确的规定，供投资者研究参考。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab4">
+                                            1，客户向业务部门、产品开发部、或者拨打60888820628（客服热线）进行咨询；
+                                            2，针对客户的个性化需求，业务部门或客服人员向产品开发部提交申请；
+                                            3，产品开发部和相关部门沟通，出具《解决方案》；
+                                            4，产品开发部联系业务部门或客服人员，提供《解决方案》；
+                                            5，与客户签署相关协议；
+                                            6，产品开发部协调方案执行。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

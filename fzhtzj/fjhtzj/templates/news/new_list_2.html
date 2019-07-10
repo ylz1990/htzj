@@ -1,0 +1,70 @@
+﻿{% extends 'htzj/base.html' %}
+{% block main %}
+<div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>新闻中心</em><i>NEWS</i></h1>
+                    <ul>
+                        <li><a href="{% url 'news:new_list' %}">公司新闻</a></li>
+                        <li class="on"><a href="{% url 'news:new_list2' %}">行业资讯</a></li>
+                        <li><a href="{% url 'news:new_list3' %}">市场动态</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金 > 行业资讯</span>
+                </div>
+                
+                <div class="new-list">
+                    <ul>
+                        {% for new in news %}
+                            <li><a href="{% url 'news:new_info' new.id %}"><span>{{ new.title }}</span><em>{{ new.create_date|date:"Y-m-d" }}</em></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="page-list">
+                        <a href="?page=1">首页</a>
+                        {#      上一页   has_previous   #}
+                    {% if page_of_news.has_previous %}
+                        <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+                    {% else %}
+                        <a aria-hidden="true">上一页</a>
+                    {% endif %}
+                        {#      上一页          #}
+                     {#      全部页码          #}
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_news.number %}
+                            <a  class="on">{{ page_num }}</a>
+                        {% else %}
+                            <a href="?page={{ page_num }}">{{ page_num }}</a>
+                        {% endif %}
+                    {% endfor %}
+                    {#      全部页码          #}
+                    {#      下一页          #}
+                    {% if page_of_news.has_next %}
+                        <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+                    {% else %}
+                        <a aria-hidden="true">下一页</a>
+                    {% endif %}
+                    {#      下一页          #}
+                         {#   尾页就是获取就大的页码数   #}
+                        <a href="?page={{ paginator.num_pages }}">尾页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司新闻</a></li>
+                    <li><a href="#">产品资讯</a></li>
+                    <li><a href="#">营销动态</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

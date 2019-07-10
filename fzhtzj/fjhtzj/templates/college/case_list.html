@@ -1,0 +1,95 @@
+﻿{% extends 'htzj/base.html' %}
+
+{% block main %}
+    <div class="com-container">
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-4" style="float: right;width: 450px" >
+                <div class="index-content-center">
+                    <h2>热门新闻<a href="{% url 'news:new_list' %}">MORE<i class="font">&#xe78d;</i></a></h2>
+                    <ul>
+                        {% for new in news_all %}
+                            <li><a href="{% url 'news:new_info' new.id %}"><span>{{ new.title }} </span><em>{{ new.create_date|date:"Y-m-d" }}</em></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        </div>
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-4" style="float: left;width: 450px" >
+                <div class="index-content-center">
+                    <h2>最新新闻<a href="{% url 'news:new_list' %}">MORE<i class="font">&#xe78d;</i></a></h2>
+                    <ul>
+                        {% for new in news_all %}
+                            <li><a href="{% url 'news:new_info' new.id %}"><span>{{ new.title }} </span><em>{{ new.create_date|date:"Y-m-d" }}</em></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        </div>
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>投资学院</em><i>Investment College</i></h1>
+                    <ul>
+                        <li class="on"><a href="{% url 'college:case_list' %}">实时快讯</a></li>
+                        <li><a href="{% url 'college:case_list2' %}">专家点评</a></li>
+                        <li><a href="{% url 'college:case_list3' %}">合作资源</a></li>
+                        <li><a href="{% url 'college:case_list4' %}">数据中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>实时快讯</span>
+                </div>
+                <div class="case-list">
+                    {% for new in news %}
+                        <div class="am-u-sm-6 am-u-md-4 am-u-lg-3">
+                            <div class="case-list-item">
+                                <a href="{% url 'college:case_info' new.id%}"><img src="{{ new.image_url.url }}" alt="{{ new.title }}"/><span>{{ new.title | slice:":7" }}</span></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="page-list">
+                        <a href="?page=1">首页</a>
+                        {#      上一页   has_previous   #}
+                    {% if page_of_news.has_previous %}
+                        <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+                    {% else %}
+                        <a aria-hidden="true">上一页</a>
+                    {% endif %}
+                        {#      上一页          #}
+                     {#      全部页码          #}
+                    {% for page_num in page_range %}
+                        {% if page_num == page_of_news.number %}
+                            <a  class="on">{{ page_num }}</a>
+                        {% else %}
+                            <a href="?page={{ page_num }}">{{ page_num }}</a>
+                        {% endif %}
+                    {% endfor %}
+                    {#      全部页码          #}
+                    {#      下一页          #}
+                    {% if page_of_news.has_next %}
+                        <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+                    {% else %}
+                        <a aria-hidden="true">下一页</a>
+                    {% endif %}
+                    {#      下一页          #}
+                         {#   尾页就是获取就大的页码数   #}
+                        <a href="?page={{ paginator.num_pages }}">尾页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="{% url 'college:case_list' %}">实时快讯</a></li>
+                    <li><a href="{% url 'college:case_list2' %}">专家点评</a></li>
+                    <li><a href="{% url 'college:case_list3' %}">数据中心</a></li>
+                    <li><a href="{% url 'college:case_list4' %}">合作资源</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

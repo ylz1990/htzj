@@ -1,0 +1,51 @@
+{% extends 'htzj/base.html' %}
+{% block main %}
+    <div class="com-container">
+        <div class="cms-g">
+             <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                 <div class="com-nav-left">
+                     <h1><em>关于我们</em><i>ABOUT US</i></h1>
+                        <ul >
+                            <li><a href="{% url 'about:company' %}">公司简介</a></li>
+                            <li><a href="{% url 'about:company_2' %}">企业文化</a></li>
+                            <li class="on"><a href="{% url 'about:company_3' %}">经营理念</a></li>
+                        </ul>
+                     </div>
+             </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>经营理念</span>
+                </div>
+                <div class="com-nav-content">
+                    <h1>福建汉唐紫金实业有限公司</h1>
+                    <p>福建汉唐紫金实业有限公司，成立于2016年10月26日 ，公司以坚持服务实体经济和金融市场的产业发展为原则，致力于打造专业，可靠，权威，诚信的期货投资服务平台。</p>
+                    <h2>经营理念</h2>
+                    <h3>一、企业愿景：拥抱万物互联金融、引领中国金融、助力全球创新</h3>
+                    <span>面对滚滚而来的万物互联浪潮，卓翼心怀梦想、憧憬未来。努力抓住物联网金融时代提供的成长机遇，聚焦构筑产品、制造以及创业加速为一体的综合服务平台，力争成为中国金融的标杆，成为理想的创新创业合作平台。</span>
+                    <h3>二、企业使命：致力产品与服务增值,至诚于专，大道于信</h3>
+                    <span>面向万物互联金融时代，布局未来发展趋势，聚焦客户价值创造，提供差异化的竞争力产品，创业加速服务，专业创品质，诚信造价值。</span>
+                    <h3>三、企业价值观：诚信、进取、合作、分享</h3>
+                    <span>  坚持阳光经营、待人诚恳，做到言出必行、信守承诺，以卓越的执行力创造差异性服务，诚信是我们最宝贵的无形资产。
+                            为了让企业更好服务于客户，坚持开拓与创新、做精做优、艰苦奋斗，目标在我们所从事的行业中成为领导者，同时坚持让奋斗者有贡献就有所得。
+                            团结合作且资源共享，与业界伙伴开放合作、携手客户成就其目标、助力创意者实现创业，成就别人成就自己。
+                            主动分享业务知识和经验，互帮互助，让员工在这里分享胜利的喜悦。
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司简介</a></li>
+                    <li><a href="#">企业文化</a></li>
+                    <li><a href="#">经营理念</a></li>
+                    <li><a href="#">发展历程</a></li>
+                    <li><a href="#">资质荣誉</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>福建汉唐紫金实业有限公司</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="../../static/images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="../../static/css/default.min.css?t=227" />
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script type="text/javascript" src="../../static/lib/jquery/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="lib/amazeui/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../static/lib/handlebars/handlebars.min.js"></script>
+<script type="text/javascript" src="../../static/lib/iscroll/iscroll-probe.js"></script>
+<script type="text/javascript" src="../../static/lib/amazeui/amazeui.min.js"></script>
+<script type="text/javascript" src="../../static/lib/raty/jquery.raty.js"></script>
+<script type="text/javascript" src="../../static/js/main.min.js?t=1"></script>
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    <header class="header">
+    <div class="header-container">
+        <div class="header-div pull-left">
+                <a class="header-logo">
+                    <img src="../../static/images/zijin_logo2.png" style="width: 190px;height: 60px" alt="福建汉唐紫金实业有限公司"/>
+                </a>
+            <button class="am-show-sm-only am-collapsed font f-btn" data-am-collapse="{target: '.header-nav'}">&#xe68b;</button>
+        </div>
+
+
+        <nav>
+            <ul class="header-nav am-collapse">
+                <li class="on"><a href="{% url 'htzj:index' %}">汉唐紫金</a></li>
+                <li><a href="{% url 'about:company' %}">关于我们</a></li>
+                <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                <li><a href="{% url 'news:new_list' %}">新闻动态</a></li>
+                <li><a href="{% url 'college:case_list' %}">投资学院</a></li>
+                <li><a href="{% url 'htzj:contact' %}">联系我们</a></li>
+            </ul>
+            <div class="header-serch  am-hide-md-down">
+                <input type="text" name="name" value="" />
+                <em class="font">&#xe632;</em>
+            </div>
+        </nav>
+
+
+    </div>
+</header>
+    <div  class="am-cf"></div>
+    <div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000}">
+        <ul class="am-slides">
+            <li><img src="../../static/images/index_banner.jpg" style="height: 472px"/></li>
+            <li><img src="../../static/images/index_banner1.jpg" style="height: 472px"/></li>
+            <li><img src="../../static/images/index_banner3.jpg" style="height: 472px"/></li>
+        </ul>
+    </div>
+{% block main %}
+{% endblock %}
+    ﻿<footer>
+    <div class="cms-g">
+        <div class="footer">
+            <ul>
+                <li><a href="#"><span>网站地图</span></a></li>
+                <li><a href="#"><span>网站导航</span></a></li>
+                <li><a href="#"><span>友情链接</span></a></li>
+                <li><a href="#"><span>法律申明</span></a></li>
+                <li>更多资讯：<a href="https://www.sge.com.cn/" target="_blank">上海黄金交易所</a></li>
+            </ul>
+            <ul>
+                <li><a><span>Copyright © 2010 - 2018 福建汉唐紫金实业有限公司 All Right Reserved</span></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% block script %}
+{% endblock %}
+</body>
+</html>

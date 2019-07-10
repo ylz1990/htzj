@@ -1,0 +1,93 @@
+﻿{% extends 'product/base_info.html' %}
+            {% block container %}
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="{% url 'htzj:index' %}">首页</a></li>
+                        <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                        <li><span>机构观点</span></li>
+                    </ol>
+                </div>
+                <div class="product-info">
+                    <div class="am-u-sm-12 am-u-md-6">
+                           <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}'>
+                                <ul class="am-slides">
+                                    <li data-thumb="../../static/images/pro_5.jpg">
+                                        <img src="../../static/images/pro_5.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_6.jpg">
+                                        <img src="../../static/images/pro_6.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_7.jpg">
+                                        <img src="../../static/images/pro_7.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_8.jpg">
+                                        <img src="../../static/images/pro_8.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="am-u-sm-12 am-u-md-6">
+                        <div class="prodct-info-canshu">
+                            <ul>
+                                <li><span>功能介绍：</span>自动化交易程序定制系列服务是围绕策略为中心的一套完整服务。它包含策略编写、测试评估、选参组合 3 个基本服务。协助客户做到程序化交易策略的专业实现。</li>
+                                <li><span>服务内容：</span>1: 自动交易程序个性化定制
+                                                            2: 程序化交易策略代码编写
+                                                            3: 股票自动选股程序代码编写
+                                                            4: 自动换月移仓交易
+                                                            5: 指标提示代码编写
+                                                            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-12  am-u-md-12">
+                        <div class="product_tabs">
+                            <div class="am-tabs" data-am-tabs>
+                                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                    <li class="am-active"><a href="#tab1"> 一、功能介绍：</a></li>
+                                    <li><a href="#tab2">二、用户定位：</a></li>
+                                    <li><a href="#tab3">三、服务内容：</a></li>
+                                    <li><a href="#tab4">四、服务流程：</a></li>
+                                </ul>
+                                <div class="am-tabs-bd">
+                                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                       自动化交易程序定制系列服务是围绕策略为中心的一套完整服务。它包含策略编写、测试评估、选参组合 3 个基本服务。协助客户做到程序化交易策略的专业实现。
+                                          策略编写是由客户提出自己的交易思想，我们来完成程序编写的一项基础服务。我们目前可以代写的平台包括 TB/ 易盛。策略编写的服务内容，从基本的进出场到复杂的加减仓措施，以至于个性化的资金管理，还有跨品种跨周期等特殊手法的实现，我们都可以编程实现。
+                                          测试评估是在一个策略编写实现之后，必须要面对的下一项工作。基础的测试评价服务可以基于平台提供的评价指标来完成。我们会对策略涉及到的细节进行一一测试，层层分解，达到客户对自己的交易模型的细节有数据支持的客观认识。套利交易时，可以提供根据套利对统计的测试报告。
+                                          参数选择是模型认识和实盘交易最为重要的一个环节。我们会针对模型的各项细节，提供参数的各品种汇总测试，方便客户选择参数。投资组合的构建包括品种选择、策略选择、资金配置的方案选择，我们都可以根据客户的具体要求，来为其设计实现。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab2">
+
+                                        对程序化交易有个性化需求的客户。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab3">
+                                            1: 自动交易程序个性化定制
+                                            2: 程序化交易策略代码编写
+                                            3: 股票自动选股程序代码编写
+                                            4: 自动换月移仓交易
+                                            5: 指标提示代码编写
+
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab4">
+
+                                            1，客户向业务部门、产品开发部、或者拨打60888820628（客服热线）进行咨询；
+                                            2，针对客户的个性化需求，业务部门或客服人员向产品开发部提交申请；
+                                            3，产品开发部和相关部门沟通，出具《解决方案》；
+                                            4，产品开发部联系业务部门或客服人员，提供《解决方案》；
+                                            5，与客户签署相关协议；
+                                            6，产品开发部协调方案执行。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

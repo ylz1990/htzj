@@ -1,0 +1,44 @@
+{% extends 'htzj/base.html' %}
+{% block main %}
+    <div class="com-container">
+        <div class="cms-g">
+             <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                 <div class="com-nav-left">
+                     <h1><em>关于我们</em><i>ABOUT US</i></h1>
+                        <ul >
+                            <li><a href="{% url 'about:company' %}">公司简介</a></li>
+                            <li class="on"><a href="{% url 'about:company_2' %}">企业文化</a></li>
+                            <li><a href="{% url 'about:company_3' %}">经营理念</a></li>
+                        </ul>
+                     </div>
+             </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>企业文化</span>
+                </div>
+                <div class="com-nav-content">
+                    <h1>福建汉唐紫金实业有限公司</h1>
+                    <p>福建汉唐紫金实业有限公司，成立于2016年10月26日 ，公司以坚持服务实体经济和金融市场的产业发展为原则，致力于打造专业，可靠，权威，诚信的期货投资服务平台。</p>
+                    <h2>企业文化</h2>
+                    <p>经营理念：专业得以权威、诚信铸就永恒</p>
+                    <p>企业愿景：诚信至上，稳健理财，与客户共拓市场</p>
+                    <p>企业格言：天道酬勤，厚德物载</p>
+                    <p>经营理念：创造价值，与民共享，互利共赢</p>
+                    <p>企业精神：诚信、专业、稳健、务实、勤奋、创新、共赢</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li><a href="#">公司简介</a></li>
+                    <li class="on"><a href="#">企业文化</a></li>
+                    <li><a href="#">经营理念</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

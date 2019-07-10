@@ -1,0 +1,52 @@
+﻿{% extends 'htzj/base.html' %}
+{% block main %}
+    <div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>新闻中心</em><i>NEWS</i></h1>
+                    <ul>
+                        <li><a href="{% url 'news:new_list' %}">公司新闻</a></li>
+                        <li><a href="{% url 'news:new_list2' %}">行业资讯</a></li>
+                        <li><a href="{% url 'news:new_list3' %}">市场动态</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金实业有限公司</span>
+                </div>
+                <div class="com-nav-content">
+                    <p style="font-size: large;text-align: center"><strong>{{ new.title }}</strong></p>
+                    <p style="font-size: medium;text-align: center"><strong>{{ new.create_date }}</strong></p>
+                    <p>{{ new.content| safe }}</p>
+                </div>
+                <div class="com-info-page">
+                    {% if previoud_new %}
+                        <p>上一篇: <a href="{% url 'news:new_info' previoud_new.id %}">{{ previoud_new.title }}</a></p>
+                    {% else %}
+                        暂无最新
+                    {% endif %}
+                    {% if next_new %}
+                    <p>下一篇: <a href="{% url 'news:new_info' next_new.id %}">{{ next_new.title }}</a></p>
+                    {% else %}
+                        已经到末尾了
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司新闻</a></li>
+                    <li><a href="#">产品资讯</a></li>
+                    <li><a href="#">营销动态</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

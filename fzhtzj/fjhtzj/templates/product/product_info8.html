@@ -1,0 +1,84 @@
+﻿{% extends 'product/base_info.html' %}
+            {% block container %}
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>福建汉唐紫金</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="{% url 'htzj:index' %}">首页</a></li>
+                        <li><a href="{% url 'product:product_list' %}">大咖论道</a></li>
+                        <li><span>服务托管 </span></li>
+                    </ol>
+                </div>
+                <div class="product-info">
+                    <div class="am-u-sm-12 am-u-md-6">
+                           <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}'>
+                                <ul class="am-slides">
+                                    <li data-thumb="../../static/images/pro_31.jpg">
+                                        <img src="../../static/images/pro_31.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_32.jpeg">
+                                        <img src="../../static/images/pro_32.jpeg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_33.jpg">
+                                        <img src="../../static/images/pro_33.jpg">
+                                    </li>
+                                    <li data-thumb="../../static/images/pro_34.jpg">
+                                        <img src="../../static/images/pro_34.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="am-u-sm-12 am-u-md-6">
+                        <div class="prodct-info-canshu">
+                            <ul>
+                                <li><span>功能介绍：</span>本服务是为有意向将程序化交易服务器整体托管到期货公司的机房，以便于就近接收交易所的行情和快捷下单交易的客户而设计的。
+                                        用于程序化交易的托管服务器可以是按照期货公司要求的自购服务器，也可以使用期货公司提供的服务器。</li>
+                                <li><span>服务内容：</span> 局网光纤，跑道快捷，网络硬件环境成熟稳定；系统隔离，安全可靠。 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-12  am-u-md-12">
+                        <div class="product_tabs">
+                            <div class="am-tabs" data-am-tabs>
+                                <ul class="am-tabs-nav am-nav am-nav-tabs">
+                                    <li class="am-active"><a href="#tab1"> 一、功能介绍：</a></li>
+                                    <li><a href="#tab2">二、用户定位：</a></li>
+                                    <li><a href="#tab3">三、服务内容：</a></li>
+                                    <li><a href="#tab4">四、服务流程：</a></li>
+                                </ul>
+                                <div class="am-tabs-bd">
+                                    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                                       本服务是为有意向将程序化交易服务器整体托管到期货公司的机房，以便于就近接收交易所的行情和快捷下单交易的客户而设计的。
+                                        用于程序化交易的托管服务器可以是按照期货公司要求的自购服务器，也可以使用期货公司提供的服务器。
+                                        服务器托管的机房是期货公司的张江机房，该机房位于上海期货信息技术公司三期托管机房之中，和上期所、中金所实现局网光纤对接，
+                                        交易上期所和中金所的期货品种具有极大优势。机房的网络硬件环境，全部采用国际主流产品和成熟技术，同时，为了保证所有客户的交易及信息安全，
+                                        我们还对不同客户托管服务器之间进行了有效隔离，以保证客户程序化交易的安全、可靠。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab2">
+                                        有成熟的程序化交易策略的投资者或投资机构。
+                                        对交易跑道的速度、稳定性和安全性要求较高。
+                                        自身有一定的技术力量。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab3">
+                                           局网光纤，跑道快捷，网络硬件环境成熟稳定；系统隔离，安全可靠。
+                                           收费方式灵活多样，体验期（一般 1 至 2 周时间）不收取任何费用。收费方法既可以按照客户要求的技术资源的多少进行收费，也可以根据客户交易量的多少进行收费，满足客户的个性化需求。
+                                    </div>
+                                    <div class="am-tab-panel am-fade" id="tab4">
+                                            1，客户向业务部门、产品开发部、或者拨打60888820628（客服热线）进行咨询；
+                                            2，针对客户的个性化需求，业务部门或客服人员向产品开发部提交申请；
+                                            3，产品开发部和相关部门沟通，出具《解决方案》；
+                                            4，产品开发部联系业务部门或客服人员，提供《解决方案》；
+                                            5，与客户签署相关协议；
+                                            6，产品开发部协调方案执行。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

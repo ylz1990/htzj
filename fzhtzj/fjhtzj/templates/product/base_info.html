@@ -1,0 +1,40 @@
+{% extends 'htzj/base.html' %}
+{% block main %}
+
+    <div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>大咖论道</em><i>PRODUCT</i></h1>
+                    <ul>
+                        <li><a href="{% url 'product:product_info' %}">机构精评</a></li>
+                        <li><a href="{% url 'product:product_info2' %}">机构观点</a></li>
+                        <li><a href="{% url 'product:product_info3' %}">名家策略</a></li>
+                        <li><a href="{% url 'product:product_info4' %}">名家精评</a></li>
+                        <li><a href="{% url 'product:product_info5' %}">财富管理</a></li>
+                        <li><a href="{% url 'product:product_info6' %}">交易策略</a></li>
+                        <li><a href="{% url 'product:product_info7' %}">投资分享</a></li>
+                        <li><a href="{% url 'product:product_info8' %}">服务托管</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% block container %}
+
+            {% endblock %}
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li><a href="{% url 'product:product_info' %}">机构精评</a></li>
+                    <li><a href="{% url 'product:product_info2' %}">机构观点</a></li>
+                    <li><a href="{% url 'product:product_info3' %}">名家策略</a></li>
+                    <li><a href="{% url 'product:product_info4' %}">名家精评</a></li>
+                    <li><a href="{% url 'product:product_info5' %}">财富管理</a></li>
+                    <li><a href="{% url 'product:product_info6' %}">交易策略</a></li>
+                    <li><a href="{% url 'product:product_info7' %}">投资分享</a></li>
+                    <li><a href="{% url 'product:product_info8' %}">服务托管</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
